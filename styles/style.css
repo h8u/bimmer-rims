@@ -1,0 +1,149 @@
+* { padding: 0; margin: 0; }
+
+html{
+    color: gray;
+    background-color: #121212;
+}
+body{
+    height: auto;
+}
+
+header{ /* Занимает высоту всего экрана */
+    color: #fff;
+    text-align: left;
+    height: 100vh;
+    width: 100%;
+    background-image:  url(../images/f10.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-block-size: 100vh;
+}
+
+.overlay{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}  
+
+.header_menu{
+    height: 5vh;
+    padding: 2vh 10vh;
+    font-size: 3vh;
+    position: relative;
+    z-index: 2;
+    font-family: 'Raleway', sans-serif;
+    white-space: nowrap;
+}
+
+.menu_logo{
+    width: 30vh;
+    display: inline-block;
+}
+
+.menu_contacts{
+    width: 30vh;
+    margin-left: 100vh;
+    display: inline-block;
+}
+
+.cover_text{
+    margin: 30vh 20vh;
+    width: 80vh;
+    font-size: 3vh;
+    position: relative;
+    z-index: 2;
+    font-family: 'Raleway', sans-serif;
+}
+
+.cover p{
+    margin-top: 0vh;
+}
+
+.cover_text p{
+    font-family: 'Rubik', sans-serif;
+}
+
+.Contactbtn {
+    color: white;
+    background-color: transparent;
+    font-size: 3vh;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.menu_contacts {
+    position: relative;
+    display: inline-block;
+}
+
+/* Скрытый контент */
+.contact-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(3, 3, 3, 0.4);
+    min-width: 160px;
+    font-family: 'Raleway', sans-serif;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.contact-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Показать контент кнопки */
+.menu_contacts:hover .contact-content {display: block;}
+
+/* Фон открытых кнопок */
+.menu_contacts:hover .Contactbtn {background-color: rgba(3, 3, 3, 0.4);}
+
+.catalogblock{
+    /*Для плитки на 4 рядов*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 10vh 20vh;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+[class^=rimcard] { /* Контент в блоке */
+    margin: 0vh;
+    margin-top: 3vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    /*Переношу на новую строку текст, если не влезает*/
+    word-break: break-all;
+}
+
+.cardpic img{
+    height: 280px; /*Размер изображений в каталоге*/
+    border-radius: 5px;
+}
+.cardpic:hover img{
+    opacity: 0.4; /*Затемнение при наведении*/
+}
+
+.rimcard p{
+    color: grey;
+}
+
+
